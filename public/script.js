@@ -21,3 +21,7 @@ document.getElementById('send').addEventListener('click', () => {
     socket.send(message);  // Send message to server
     input.value = '';  // Clear the input box
 });
+
+socket.addEventListener('error', (error) => {
+    console.log(`WebSocket error: ${error}`);
+});

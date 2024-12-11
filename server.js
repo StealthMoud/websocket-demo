@@ -23,6 +23,11 @@ wss.on('connection', (socket) => {
     });
 });
 
+wss.on('error', (error) => {
+    console.error('WebSocket error:', error);
+});
+
+
 // Start the server
 const PORT = 8080;
 server.listen(PORT, () => {
